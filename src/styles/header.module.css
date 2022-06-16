@@ -1,0 +1,12 @@
+.title {
+    background-color: #A79AB2;
+    -webkit-box-shadow: 0px 0px 17px 8px rgba(77,77,77,0.31git ); 
+    box-shadow: 0px 0px 17px 8px rgba(77,77,77,0.31);
+    border-radius: 0 0 2em 2em;
+    padding: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+    font-style: oblique;
+    font-size: larger;
+    color: ghostwhite;
+}

@@ -1,0 +1,28 @@
+.imageRadius {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   width: 130px;
+}
+
+.imageRadius > p {
+    text-align: center;
+    font-style: italic;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 130px;
+    overflow: hidden;
+    margin: 0.2em;
+}
+
+.imageRadius > img {
+    border-radius: 1em;
+    min-height: 90px;
+    width: 130px;
+}
+
+.MuiTooltip-tooltip {
+    font-size: large !important;
+}
