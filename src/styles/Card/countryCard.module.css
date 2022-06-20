@@ -1,13 +1,29 @@
 .countryCard {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+  flex-direction: column;
   background-color: #96c3ce;
   border-radius: 0.5em;
-  padding: 1em;
+  padding: 0em 1em 0.5em 1em;
   -webkit-box-shadow: 0px 0px 8px 1px rgba(125, 125, 125, 0.66);
   box-shadow: 0px 0px 8px 1px rgba(125, 125, 125, 0.66);
+}
+
+.continent {
+  background-color: #a79ab2;
+  color: whitesmoke;
+  border-radius: 0.5em;
+  text-align: center;
+  font-style: oblique;
+  padding: 0.5em;
+  margin-top: 0.5em;
+}
+
+.flagInfos {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-top: 0.5em;
+  align-items: center;
 }
 
 .infos {
@@ -15,7 +31,10 @@
 }
 
 .infos p {
+  width: 7em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin: 0.2em;
   font-size: small;
-  text-overflow: ellipsis;
 }

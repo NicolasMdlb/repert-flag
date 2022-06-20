@@ -1,7 +1,7 @@
 .cards {
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   column-gap: 1.5rem;
   row-gap: 1.5rem;
   padding: 1.5rem;
@@ -17,6 +17,18 @@
 
 .navCountry {
   display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.navCountry > div:last-child {
+  margin-left: 2em;
+  font-style: oblique;
+}
+
+.paginate {
+  display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 2em;
 }

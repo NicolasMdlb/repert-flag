@@ -1,15 +1,35 @@
-import Button from "@mui/material/Button";
-import ButtonGroup from "@mui/material/ButtonGroup";
+import { useState } from "react";
+import ToggleButton from "@mui/material/ToggleButton";
+import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 
 const NavCountry = (props) => {
+  const [alignment, setAlignment] = useState("Tous");
+
+  const handleChange = (event) => {
+    setAlignment(event.target.value);
+    props.changeRegion(event.target.value === "Tous" ? null : event.target.value)
+  };
 
   return (
     <>
-      <ButtonGroup variant="text" aria-label="text button group">
+      <ToggleButtonGroup
+        variant="outlined" 
+        value={alignment}
+        color="secondary"
+        exclusive
+        onChange={handleChange}
+      >
         {props.continents.map((c) => {
-          return <Button key={c} onClick={() => props.changeRegion(c === "Tous" ? null : c)}>{c}</Button>;
+          return (
+            <ToggleButton
+              key={c}
+              value={c}
+            >
+              {c}
+            </ToggleButton>
+          );
         })}
-      </ButtonGroup>
+      </ToggleButtonGroup>
     </>
   );
 };

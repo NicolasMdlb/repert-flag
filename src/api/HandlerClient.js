@@ -7,7 +7,7 @@ export async function getCountries() {
   return transformToCountries(response.data);
 }
 
-export async function getRegion(region, functCountries) {
+export async function getRegion(region) {
   let response = await ApiCountries.get("/region/" + region);
 
   return transformToCountries(response.data);
