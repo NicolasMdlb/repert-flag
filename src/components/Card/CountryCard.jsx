@@ -1,28 +1,37 @@
 import ImageFlag from "./imageFlag";
 import styles from "../../styles/Card/countryCard.module.css";
+import { NavLink } from "react-router-dom";
 
 const CountryCard = (props) => {
   return (
-    <div className={styles.countryCard}>
-      {props.all && (
-        <div className={styles.continent}>
-          <strong>{props.region}</strong>
-        </div>
-      )}
-      <div className={styles.flagInfos}>
-        <ImageFlag img={props.flag} name={props.name} />
-        <div className={styles.infos}>
-          <p>
-            <strong>Pays : </strong>
-          </p>
-          <p>{props.nameFr}</p>
-          <p>
-            <strong>Capitale : </strong>
-          </p>
-          <p>{props.capital}</p>
+    <NavLink to={props.name}>
+      <div className={styles.countryCard}>
+        {props.all && (
+          <div className={styles.continent}>
+            <strong>{props.region}</strong>
+          </div>
+        )}
+        <div className={styles.flagInfos}>
+          <ImageFlag img={props.flag} name={props.name} />
+          <div className={styles.infos}>
+            <p>
+              <strong>Name : </strong>
+            </p>
+            <p>{props.name}</p>
+            {props.capitals !== undefined &&
+              <>
+                <p>
+                  <strong>Capitale(s) : </strong>
+                </p>
+                <p>
+                  {props.capitals.join(", ")}
+                </p>
+              </>
+            }
+          </div>
         </div>
       </div>
-    </div>
+    </NavLink>
   );
 };
 

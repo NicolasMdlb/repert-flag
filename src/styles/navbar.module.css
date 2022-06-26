@@ -1,0 +1,16 @@
+.navContainer > nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #A79AB2;
+    height: 5em;
+    width: 100%;
+    text-decoration: none;
+}
+
+.imageRight {
+    height: 4em;
+    padding-left: 2em;
+    padding-right: 2em;
+}

@@ -1,9 +1,13 @@
 .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     background-color: #A79AB2;
-    -webkit-box-shadow: 0px 0px 17px 8px rgba(77,77,77,0.31git ); 
+    -webkit-box-shadow: 0px 0px 17px 8px rgba(77,77,77,0.31 ); 
     box-shadow: 0px 0px 17px 8px rgba(77,77,77,0.31);
     border-radius: 0 0 2em 2em;
-    padding: 1em;
+    padding: 0.5em;
     margin-bottom: 1em;
     text-align: center;
     font-style: oblique;
@@ -11,7 +15,7 @@
     color: ghostwhite;
 }
 
-.title > h1 {
+h1 {
     padding: 0%;
     margin: 0%;
 }

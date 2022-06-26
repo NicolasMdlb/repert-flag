@@ -1,10 +1,17 @@
 import styles from "./../styles/header.module.css";
+import ImageFlag from "./Card/imageFlag";
+import TitleView from './TitleView';
 
 const Header = (props) => {
   return (
-    <header className={styles.title}>
-      <h1>{props.children}</h1>
-    </header>
+    <div className={styles.title}>
+      {props.img !== undefined &&
+        <ImageFlag imgWidth={props.imgWidth} imgHeight={props.imgHeight} name={props.title} img={props.img}/>
+      }
+      <TitleView>
+        {props.title}
+      </TitleView>
+    </div>
   );
 };
 

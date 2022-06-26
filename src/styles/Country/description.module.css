@@ -1,0 +1,82 @@
+.description {
+  -webkit-box-shadow: 0px 0px 21px 3px #bdbdbd;
+  box-shadow: 0px 0px 21px 3px #e0e0e0;
+  border-radius: 1em 1em 1em 1em;
+  padding: 1em;
+}
+
+.subDescription{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+
+.coatOfArms {
+    justify-content: center;
+    align-items: center;
+    place-self: center;
+}
+
+.coatOfArms img {
+    height: 10em;
+}
+
+.region {
+  background-color: #96c3ce;
+  color: whitesmoke;
+  border-radius: 0.5em;
+  text-align: center;
+  font-style: oblique;
+  padding: 0.5em;
+}
+
+h2 {
+  margin-bottom: 0.5em;
+  margin-top: 0em;
+}
+
+p {
+  margin-bottom: 0.2em;
+  margin-top: 0.2em;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+}
+
+.title > p:first-child {
+  min-width: 8em;
+}
+
+.subTitle > div {
+  display: flex;
+  flex-direction: row;
+}
+
+.subTitle div > p:first-child {
+  font-style: italic;
+  font-weight: bolder;
+  min-width: 5em;
+}
+
+.currency {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.currency > p {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.5rem;
+  row-gap: 1.5rem;
+}
+
+.currency > p:first-child {
+  font-style: italic;
+  font-weight: bolder;
+}

@@ -7,13 +7,16 @@ const NavCountry = (props) => {
 
   const handleChange = (event) => {
     setAlignment(event.target.value);
-    props.changeRegion(event.target.value === "Tous" ? null : event.target.value)
+    props.changeRegion(
+      event.target.value === "Tous" ? null : event.target.value
+    );
   };
 
   return (
     <>
       <ToggleButtonGroup
-        variant="outlined" 
+        size="small"
+        variant="outlined"
         value={alignment}
         color="secondary"
         exclusive
@@ -21,10 +24,7 @@ const NavCountry = (props) => {
       >
         {props.continents.map((c) => {
           return (
-            <ToggleButton
-              key={c}
-              value={c}
-            >
+            <ToggleButton key={c} value={c}>
               {c}
             </ToggleButton>
           );
