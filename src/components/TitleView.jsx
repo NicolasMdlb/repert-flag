@@ -1,9 +1,9 @@
 const TitleView = (props) => {
-    return (
-        <div>
-            <h1>{props.children}</h1>
-        </div>
-    );
+  return (
+    <div>
+      <h2>{props.children}</h2>
+    </div>
+  );
 };
 
 export default TitleView;

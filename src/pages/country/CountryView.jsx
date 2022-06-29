@@ -5,6 +5,7 @@ import Header from "../../components/Header";
 import Description from './../../components/Country/Description';
 import CircularProgress from "@mui/material/CircularProgress";
 import styles from "../../styles/Country/countryView.module.css";
+import CountryMapView from './../../components/Country/CountryMapView';
 
 
 const CountryView = () => {
@@ -30,9 +31,9 @@ const CountryView = () => {
         </>
       ) : (
         <>
-          <Header imgWidth="5em" imgHeight="3em" img={countryFull.flag} title={name} />
+          <Header imgWidth="3em" imgHeight="2em" img={countryFull.flag} title={name} />
           <div className={styles.container}>
-            <div>map</div>
+            <CountryMapView {...countryFull} />
             <Description {...countryFull} />
           </div>
         </>
