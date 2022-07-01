@@ -1,9 +1,9 @@
 class Country {
-  constructor(name, capital, region, flag) {
-    this.name = name;
-    this.capitals = capital;
-    this.region = region;
-    this.flag = flag;
+  constructor(response) {
+    this.name = response.name.common;
+    this.capitals = response.capital;
+    this.region = response.region;
+    this.flag = response.flags.png;
   }
 }
 

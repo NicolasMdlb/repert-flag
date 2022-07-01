@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .navCountry > div:last-child {
@@ -45,9 +46,14 @@
   }
 }
 
-@media (max-width: 700px) {
-  .cardsView {
+@media (max-width: 750px) {
+  .cardsView, .navCountry {
     display: flex;
     flex-direction: column;
+  }
+
+  .navCountry > div:last-child {
+    margin-left: 0em;
+    font-style: oblique;
   }
 }

@@ -6,28 +6,26 @@ const CountryCard = (props) => {
   return (
     <NavLink to={props.name}>
       <div className={styles.countryCard}>
-        {props.all && (
-          <div className={styles.continent}>
-            <strong>{props.region}</strong>
-          </div>
-        )}
+        <div className={styles.country}>
+          <strong>{props.name}</strong>
+        </div>
         <div className={styles.flagInfos}>
           <ImageFlag img={props.flag} name={props.name} />
           <div className={styles.infos}>
             <p>
-              <strong>Name : </strong>
+              <strong>Capitale(s) : </strong>
             </p>
-            <p>{props.name}</p>
-            {props.capitals !== undefined &&
+            <p>
+              {props.capitals !== undefined ? props.capitals.join(", ") : "No capital"}
+            </p>
+            {props.all && (
               <>
                 <p>
-                  <strong>Capitale(s) : </strong>
+                  <strong>Continent : </strong>
                 </p>
-                <p>
-                  {props.capitals.join(", ")}
-                </p>
+                <p>{props.region}</p>
               </>
-            }
+            )}
           </div>
         </div>
       </div>

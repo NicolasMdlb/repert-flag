@@ -8,11 +8,7 @@
   box-shadow: 0px 0px 8px 1px rgba(125, 125, 125, 0.66);
 }
 
-a {
-  text-decoration: none;
-}
-
-.continent {
+.country {
   background-color: #a79ab2;
   color: whitesmoke;
   border-radius: 0.5em;

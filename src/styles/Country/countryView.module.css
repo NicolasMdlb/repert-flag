@@ -5,7 +5,6 @@
   column-gap: 1rem;
   row-gap: 1.5rem;
   padding: 2em;
-  height: 400px;
 }
 
 .circleProgress {
@@ -14,4 +13,12 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+@media (max-width: 1250px) {
+  
+}
+
+@media (max-width: 700px) {
+  
 }

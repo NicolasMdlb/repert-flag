@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<NavBar />}>
           <Route index path="/" element={<Home />} />
-          <Route path="Countries" element={<CountryManager />}></Route>
+          <Route exact path="Countries" element={<CountryManager />}></Route>
           <Route path="Countries/:name" element={<CountryView />} />
         </Route>
       </Routes>
