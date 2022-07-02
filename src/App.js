@@ -7,15 +7,16 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Routes>
         <Route exact path="/" element={<NavBar />}>
           <Route index path="/" element={<Home />} />
-          <Route exact path="Countries" element={<CountryManager />}></Route>
-          <Route path="Countries/:name" element={<CountryView />} />
+          <Route path="Catalog" element={<CountryManager />} />
+          <Route path="Catalog/:name" element={<CountryView />} />
+          <Route exact path="Map/" element={<h1>Coming soon Map</h1>} />
         </Route>
       </Routes>
-    </div>
+    </>
   );
 }
 

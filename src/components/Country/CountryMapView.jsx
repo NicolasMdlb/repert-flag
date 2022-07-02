@@ -1,5 +1,7 @@
-import { useEffect, useState } from 'react';
-import { MapContainer, TileLayer, FeatureGroup, Circle, Popup, Marker } from 'react-leaflet'
+import { useEffect, useState } from "react";
+import { MapContainer, TileLayer, FeatureGroup, Circle, Popup, Marker } from "react-leaflet";
+import ImageFlag from "./../Card/imageFlag";
+import styles from "../../styles/Country/countryMapView.module.css"
 import "leaflet/dist/leaflet.css";
 
 const CountryMapView = (props) => {
@@ -8,11 +10,10 @@ const CountryMapView = (props) => {
   const [geoCap, setgeoCap] = useState(null)
 
   useEffect(() => {
-    // define icon
+    // charge icon
     const L = require("leaflet");
 
     delete L.Icon.Default.prototype._getIconUrl;
-
     L.Icon.Default.mergeOptions({
       iconRetinaUrl: require("leaflet/dist/images/marker-icon-2x.png"),
       iconUrl: require("leaflet/dist/images/marker-icon.png"),
@@ -39,14 +40,25 @@ const CountryMapView = (props) => {
         {geoCap !== null && (
           <>
             <FeatureGroup pathOptions={purpleOptions}>
-              <Popup>{property}</Popup>
+              <Popup>
+                {property}
+              </Popup>
               <Circle center={geoCap} radius={3000} />
             </FeatureGroup>
           </>
         )}
         <>
           <Marker position={props.geoLoc} >
-            <Popup>{props.name}</Popup>
+            <Popup>
+              <div className={styles.popupMap}>
+                <p><strong>Country</strong></p>
+                <p>{props.name}</p>
+                <div>
+                  <p><strong>Coat of Arms</strong></p>
+                  <ImageFlag imgWidth="5em" imgHeight="7em" name="Coast Of Arms" img={props.coatOfArms} />
+                </div>
+              </div>
+            </Popup>
           </Marker>
         </>
       </MapContainer>

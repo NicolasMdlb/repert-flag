@@ -10,7 +10,7 @@ const Header = (props) => {
       }
       <TitleView>
         {props.title}
-      </TitleView>
+      </TitleView>    
     </div>
   );
 };

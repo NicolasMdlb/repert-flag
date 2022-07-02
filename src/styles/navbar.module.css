@@ -1,4 +1,4 @@
-.navContainer > nav {
+.navContainer {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -9,7 +9,7 @@
   text-decoration: none;
 }
 
-nav > a {
+.navContainer > a {
   height: 4em;
   padding-left: 2em;
   padding-right: 2em;

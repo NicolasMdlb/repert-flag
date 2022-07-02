@@ -1,10 +1,19 @@
-.App {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+html, body {
+  height: 100%;
 }
 
-.active  {
+#root {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+footer {
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.active {
   color: whitesmoke;
   background: rgba(255, 255, 255, 0.2);
 }
@@ -24,4 +33,8 @@ a {
   border-radius: 1em 1em 1em 1em;
   -webkit-box-shadow: 0px 0px 21px 3px #bdbdbd;
   box-shadow: 0px 0px 21px 3px #e0e0e0;
+}
+
+.leaflet-popup-content p {
+  margin: 0em;
 }

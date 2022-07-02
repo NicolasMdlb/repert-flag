@@ -1,12 +1,14 @@
 import styles from "../styles/navbar.module.css";
 import imageWorld from "../assets/images/MapWorldGrey.png";
 import { NavLink, Outlet } from "react-router-dom";
+import Footer from './Footer';
 
 const NavBar = () => {
   return (
     <>
-      <header className={styles.navContainer}>
-        <nav>
+    <div className="content">
+      <header>
+        <nav className={styles.navContainer}>
           <NavLink
             className={styles.hvrUnderlineFromCenter}
             to="/"
@@ -19,17 +21,26 @@ const NavBar = () => {
           </NavLink>
           <NavLink
             className={styles.hvrUnderlineFromCenter}
-            to="/Countries"
+            to="/Catalog"
           >
-            <span>
-              Countries
+           <span>
+              Catalog
             </span>
           </NavLink>
+          <NavLink
+            className={styles.hvrUnderlineFromCenter}
+            to="/Map"
+          >
+            <span>
+              Map
+            </span>
+          </NavLink>
+           
         </nav>
       </header>
-      <div>
         <Outlet />
       </div>
+      <Footer />
     </>
   );
 };

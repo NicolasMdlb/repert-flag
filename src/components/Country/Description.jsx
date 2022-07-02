@@ -1,6 +1,9 @@
+import useMediaQuery from '@mui/material/useMediaQuery';
 import styles from "../../styles/Country/description.module.css";
 
 const Description = (props) => {
+  const isShort = useMediaQuery('(max-width:550px)');
+
   return (
     <>
       <div className={styles.description}>
@@ -39,7 +42,7 @@ const Description = (props) => {
               <p>{props.continent}</p>
             </div>
           </div>
-          {props.coatOfArms &&
+          {(props.coatOfArms && !isShort) &&
             <div className={styles.coatOfArms}>
               <img src={props.coatOfArms} alt="coatsOfArms"></img>
             </div>

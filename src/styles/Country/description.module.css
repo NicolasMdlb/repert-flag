@@ -16,10 +16,12 @@
   justify-content: center;
   align-items: center;
   place-self: center;
+  height: 10em;
 }
 
 .coatOfArms img {
-  height: 10em;
+  height: 100%;
+  width: 100%;
 }
 
 .region {
