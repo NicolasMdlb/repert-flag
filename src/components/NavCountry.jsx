@@ -9,7 +9,7 @@ import MenuItem from "@mui/material/MenuItem";
 import OutlinedInput from "@mui/material/OutlinedInput";
 
 const NavCountry = (props) => {
-  const [alignment, setAlignment] = useState("Tous");
+  const [alignment, setAlignment] = useState("All");
   const isMobile = useMediaQuery('(max-width:550px)');
 
   const handleChange = (event) => {
@@ -19,7 +19,7 @@ const NavCountry = (props) => {
 
     setAlignment(value);
     props.changeRegion(
-      value === "Tous" ? null : value
+      value === "All" ? null : value
     );
 
   };

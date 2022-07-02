@@ -32,7 +32,7 @@ const CountryManager = () => {
   }, [countries, page]);
 
   if (continents === null && countries != null) {
-    let regions = ["Tous"];
+    let regions = ["All"];
 
     regions.push(
       countries
