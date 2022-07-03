@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0em 2em;
+}
+
+.container h1,
+.container h2 {
+  text-align: center;
+  font-style: oblique;
+  margin-bottom: 0em;
+}
+
+.resume {
+  padding-top: 1em;
+  text-align: center;
+  font-size: large;
+}

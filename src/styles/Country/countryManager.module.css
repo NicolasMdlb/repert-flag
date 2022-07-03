@@ -1,0 +1,59 @@
+.navCountry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.navCountry > div:last-child {
+  margin-left: 2em;
+  font-style: oblique;
+}
+
+.paginate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2em;
+}
+
+.cardsView {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1.5rem;
+  row-gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.circleProgress {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+@media (max-width: 1400px) {
+  .cardsView {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1050px) {
+  .cardsView {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 750px) {
+  .cardsView, .navCountry {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navCountry > div:last-child {
+    margin-left: 0em;
+    font-style: oblique;
+  }
+}
