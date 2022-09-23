@@ -64,36 +64,36 @@ const CountryManager = () => {
   return (
     <>
       <Outlet />
-      {countries === null ? (
+      { countries === null ? (
         <>
-          <div className={styles.circleProgress}>
+          <div className={ styles.circleProgress }>
             <CircularProgress color="inherit" />
           </div>
         </>
       ) : (
         <>
           <Header title="List of countries" />
-          <div className={styles.navCountry}>
-            <NavCountry continents={continents} changeRegion={regionHandler} />
-            <div>Number of countries : {countries.length}</div>
+          <div className={ styles.navCountry }>
+            <NavCountry continents={ continents } changeRegion={ regionHandler } />
+            <div>Number of countries : { countries.length }</div>
           </div>
-          <div className={styles.cardsView}>
-            {showCountries.map((c, index) => {
-              return <CountryCard key={index} all={all} {...c} />;
-            })}
+          <div className={ styles.cardsView }>
+            { showCountries.map((c, index) => {
+              return <CountryCard key={ index } all={ all } { ...c } />;
+            }) }
           </div>
-          <div className={styles.paginate}>
+          <div className={ styles.paginate }>
             <Pagination
-              count={Math.ceil(pages)}
-              page={page}
-              onChange={handlePage}
+              count={ Math.ceil(pages) }
+              page={ page }
+              onChange={ handlePage }
               size="medium"
               variant="outlined"
               color="secondary"
             />
           </div>
         </>
-      )}
+      ) }
     </>
   );
 };
